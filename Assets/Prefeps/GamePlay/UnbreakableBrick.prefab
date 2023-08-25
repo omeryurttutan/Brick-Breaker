@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 784362693631609744}
   - component: {fileID: 995241581160964603}
   - component: {fileID: 8096661487028944041}
-  - component: {fileID: 1701797519010156596}
+  - component: {fileID: 3967622579595265395}
   m_Layer: 0
   m_Name: UnbreakableBrick
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1701797519010156596
+--- !u!114 &3967622579595265395
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

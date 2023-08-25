@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class LosePanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public MainMenuUI mainMenuUI;
+    public void OnClickRetry()
     {
-        
+        UIManager.instance.inGameUI.SetActiveLifePanel(true);
+        BallManager.instance.SpawnBall();
+        LevelManager.instance.LoadLevel();
+        Platform.instance.ResetPlatform();
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoseMainMenu()
     {
-        
+        UIManager.instance.inGameUI.lifePanel.gameObject.SetActive(true);
+        gameObject.SetActive(false);
+        mainMenuUI.gameObject.SetActive(true);
+        Platform.instance.ResetPlatform();
+    }
+    
+    public void SetActiveLosePanel(bool x)
+    {
+        gameObject.SetActive(x);
     }
 }

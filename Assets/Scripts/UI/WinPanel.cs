@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class WinPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public MainMenuUI mainMenuUI;
+
+    public void SetActiveWin()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ClickNextLevel()
     {
+        UIManager.instance.inGameUI.lifePanel.gameObject.SetActive(true);
+        gameObject.SetActive(false);
+        LevelManager.instance.DestroyLevel();
+        BallManager.instance.DestroyBall();
+        PowerUpManager.instance.DestroyPowerUp();
+        LevelManager.instance.NextLevel();
+        Platform.instance.ResetPlatform();
+        GameManager.instance.ResetLifeCount();
+        
+    }
+
+    public void ClickMainMenu()
+    {
+        UIManager.instance.inGameUI.lifePanel.gameObject.SetActive(true);
+        GameManager.instance.ResetLifeCount();
+        gameObject.SetActive(false);
+        mainMenuUI.gameObject.SetActive(true);
+        LevelManager.instance.DestroyLevel();
+        PowerUpManager.instance.DestroyPowerUp();
+        BallManager.instance.DestroyBall();
+        Platform.instance.ResetPlatform();
         
     }
 }

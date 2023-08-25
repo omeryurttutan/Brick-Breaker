@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1747672523420374393}
   - component: {fileID: 793831332609023752}
   - component: {fileID: 50667503483079137}
-  - component: {fileID: 6621885454828239319}
   - component: {fileID: -506269753485841055}
   m_Layer: 0
   m_Name: PowerUp
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6375614636996250559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.1, y: 1.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 75d577e07c0e605448081c598f7482ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6621885454828239319
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6375614636996250559}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-506269753485841055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 906d93fb1dc4e8b439d5b9671b9305b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUpType: 0
+  powerUpSpeed: 0.5
+  renderer: {fileID: 50667503483079137}
+  collider: {fileID: 2129823350222235115, guid: f0e640495398cc94a87109a719ef64de,
+    type: 3}

@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MainMenuUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void ClickPlay()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        LevelManager.instance.currentLevelIndex = 0;
+        LevelManager.instance.currentLevelIndexPlus = 1;
+        InGameUI.instance.SetLevelCountText();
+        UIManager.instance.inGameUI.lifePanel.gameObject.SetActive(true);
+        BallManager.instance.SpawnBall();
+        LevelManager.instance.LoadLevel();
+        GameManager.instance.ResetLifeCount();
+        gameObject.SetActive(false);
     }
 }
